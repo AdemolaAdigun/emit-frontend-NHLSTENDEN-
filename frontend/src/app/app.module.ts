@@ -13,6 +13,9 @@ import { PopUpsComponent } from './components/pop-ups/pop-ups.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { MatToolbarModule} from "@angular/material/toolbar";
+import { HeaderComponent } from './components/header/header.component';
+import { MatIconModule } from "@angular/material/icon";
+import { DemoMaterialModule } from "./material-module";
 
 @NgModule({
   declarations: [
@@ -24,15 +27,18 @@ import { MatToolbarModule} from "@angular/material/toolbar";
     InventoryOverviewComponent,
     ShopComponent,
     PopUpsComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    DemoMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
