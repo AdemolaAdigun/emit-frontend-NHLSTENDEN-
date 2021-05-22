@@ -11,7 +11,8 @@ import { InventoryOverviewComponent } from './pages/inventory-overview/inventory
 import { ShopComponent } from './pages/shop/shop.component';
 import { PopUpsComponent } from './components/pop-ups/pop-ups.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MatToolbarModule} from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
@@ -23,12 +24,13 @@ import { HeaderComponent } from './components/header/header.component';
     InventoryOverviewComponent,
     ShopComponent,
     PopUpsComponent,
-    HeaderComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
