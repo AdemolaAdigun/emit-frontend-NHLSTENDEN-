@@ -10,6 +10,8 @@ import { ProjectOverviewComponent } from './pages/project-overview/project-overv
 import { InventoryOverviewComponent } from './pages/inventory-overview/inventory-overview.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { PopUpsComponent } from './components/pop-ups/pop-ups.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { PopUpsComponent } from './components/pop-ups/pop-ups.component';
     ProjectOverviewComponent,
     InventoryOverviewComponent,
     ShopComponent,
-    PopUpsComponent
+    PopUpsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
