@@ -16,6 +16,8 @@ import { MatToolbarModule} from "@angular/material/toolbar";
 import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from "@angular/material/icon";
 import { DemoMaterialModule } from "./material-module";
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { DemoMaterialModule } from "./material-module";
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    DemoMaterialModule
+    DemoMaterialModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
