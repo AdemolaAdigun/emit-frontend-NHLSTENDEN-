@@ -11,7 +11,13 @@ import { InventoryOverviewComponent } from './pages/inventory-overview/inventory
 import { ShopComponent } from './pages/shop/shop.component';
 import { PopUpsComponent } from './components/pop-ups/pop-ups.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './components/footer/footer.component';
+import { MatToolbarModule} from "@angular/material/toolbar";
 import { HeaderComponent } from './components/header/header.component';
+import { MatIconModule } from "@angular/material/icon";
+import { DemoMaterialModule } from "./material-module";
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 @NgModule({
   declarations: [
@@ -23,14 +29,19 @@ import { HeaderComponent } from './components/header/header.component';
     InventoryOverviewComponent,
     ShopComponent,
     PopUpsComponent,
+    FooterComponent,
     HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    DemoMaterialModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
