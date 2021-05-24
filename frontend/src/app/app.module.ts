@@ -17,6 +17,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from "@angular/material/icon";
 import { DemoMaterialModule } from "./material-module";
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {AddUserFormComponent} from "./pages/pop-ups/add-user-form/add-user-form.component";
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     ShopComponent,
     PopUpsComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    AddUserFormComponent
   ],
   imports: [
     BrowserModule,
