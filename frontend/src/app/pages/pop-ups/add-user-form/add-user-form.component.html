@@ -1,0 +1,69 @@
+<div id="user-form-dialog">
+<!--  <p *ngIf="isEditDish" class="id">Item ID: {{dialogData.id}}</p>-->
+  <form [formGroup]="form" novalidate="">
+    <div class="user-form-details">n
+
+      <label class="input-label">First Name:</label>
+      <input type="text" class="custom-text-input" formControlName="name"/>
+      <label class="input-label">Last Name:</label>
+      <input type="text" class="custom-text-input" formControlName="description"/>
+      <label class="input-label">Email</label>
+      <input type="number" class="custom-text-input" formControlName="minOrderPrice"/>
+      <label class="input-label">Password</label>
+      <select class="custom-select" formControlName="role">
+<!--        <option *ngFor="let category of allCategories" value="{{category.id}}">-->
+<!--          {{category.name}}                </option>-->
+      </select>
+    </div>
+    <div class="avatar">
+<!--      <div class="preview">-->
+<!--        <label class="input-label">Image</label>-->
+<!--        <br>-->
+<!--        <img *ngIf="isEditDish" [src]="dialogData.imageURL" alt="Product_image" (load)="imgLoaded = true">-->
+<!--        <img *ngIf="!isEditDish && selectedFile"-->
+<!--             [src]="addImage"-->
+<!--             alt="Product_image"-->
+<!--             (load)="imgLoaded = true">-->
+<!--      </div>-->
+<!--      <app-spinner *ngIf="!imgLoaded && isEditDish"></app-spinner>-->
+      <div class="upload-button">
+        <input type="file" id="avatar"/>
+<!--               (change)="handleFileSelection($event.target.files[0])"-->
+<!--               [accept]="this.allowedTypes"/>-->
+        <br>
+<!--        <label class="file-label" for="dish-image">-->
+<!--          {{this.selectedFile ? this.selectedFile.name : ""}}                </label>-->
+      </div>
+    </div>
+<!--    <div class="buttons" [ngSwitch]="isEditDish">-->
+<!--      <div *ngSwitchCase="true">-->
+        <div class="edit-dish-buttons">
+          <div class="cancel">
+            <button type="submit" class="custom-button" (click)="archiveDish()">
+              <b>Archive</b>
+            </button>
+          </div>
+          <div class="success">
+            <button type="submit" class="custom-button" (click)="saveEditedDish()">
+              <b>Save</b>
+            </button>
+          </div>
+        </div>
+<!--      </div>-->
+<!--      <div *ngSwitchCase="false">-->
+<!--        <div class="add-dish-buttons">-->
+<!--          <div class="cancel">-->
+<!--            <button type="submit" class="custom-button" (click)="closeDialog.emit(true)">-->
+<!--              <b>Cancel</b>-->
+<!--            </button>-->
+<!--          </div>-->
+<!--          <div class="success">-->
+<!--            <button type="submit" class="custom-button" (click)="saveAddedDish()">-->
+<!--              <b>Add</b>-->
+<!--            </button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+  </form>
+</div>
