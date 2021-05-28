@@ -16,8 +16,8 @@ import { MatToolbarModule} from "@angular/material/toolbar";
 import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from "@angular/material/icon";
 import { DemoMaterialModule } from "./material-module";
-import {MatSidenavModule} from '@angular/material/sidenav';
-
+import { MatSidenavModule} from '@angular/material/sidenav';
+import { ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -39,7 +39,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatToolbarModule,
     MatIconModule,
     DemoMaterialModule,
-    MatSidenavModule
+    MatSidenavModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
