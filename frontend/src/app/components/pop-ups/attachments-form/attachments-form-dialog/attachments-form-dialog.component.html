@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Add attachment</h1>
+<div mat-dialog-content>
+  <p>Attachment details</p>
+  <mat-form-field>
+    <label for="input-file-id" class="md-button md-raised md-primary">Include your attachment</label><br><br>
+    <input [(ngModel)]="data.attachment" class="ng-hide" id="input-file-id" multiple type="file" />
+  </mat-form-field><br>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data.attachment" cdkFocusInitial>Add</button>
+</div>

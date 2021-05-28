@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-pop-ups',
   templateUrl: './pop-ups.component.html',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopUpsComponent implements OnInit {
 
-  constructor() { }
 
+
+  constructor(){}
   ngOnInit(): void {
   }
 

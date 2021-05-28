@@ -17,6 +17,19 @@ import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from "@angular/material/icon";
 import { DemoMaterialModule } from "./material-module";
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { DialogUserFormComponent } from './components/pop-ups/user-form/dialog-user-form/dialog-user-form.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {FormsModule} from "@angular/forms";
+import { ProjectFormComponent } from './components/pop-ups/project-form/project-form.component';
+import { ProjecrFormDialogComponent } from './components/pop-ups/project-form/projecr-form-dialog/projecr-form-dialog.component';
+import { ComponentFormComponent } from './components/pop-ups/component-form/component-form.component';
+import { ComponentFormDialogComponent } from './components/pop-ups/component-form/component-form-dialog/component-form-dialog.component';
+import { UserFormComponent } from './components/pop-ups/user-form/user-form.component';
+import { AttachmentsFormComponent } from './components/pop-ups/attachments-form/attachments-form.component';
+import { AttachmentsFormDialogComponent } from './components/pop-ups/attachments-form/attachments-form-dialog/attachments-form-dialog.component';
+import { EditProjectOverviewDialogComponent } from './components/pop-ups/edit-project-overview-dialog/edit-project-overview-dialog.component';
+import { OrdersFormComponent } from './components/pop-ups/orders-form/orders-form.component';
+import { OrdersFormDialogComponent } from './components/pop-ups/orders-form/orders-form-dialog/orders-form-dialog.component';
 
 
 @NgModule({
@@ -30,8 +43,21 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     ShopComponent,
     PopUpsComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    DialogUserFormComponent,
+    ProjectFormComponent,
+    ProjecrFormDialogComponent,
+    ComponentFormComponent,
+    ComponentFormDialogComponent,
+    UserFormComponent,
+    AttachmentsFormComponent,
+    AttachmentsFormDialogComponent,
+    EditProjectOverviewDialogComponent,
+    OrdersFormComponent,
+    OrdersFormDialogComponent
   ],
+  entryComponents:[DialogUserFormComponent, ProjecrFormDialogComponent,ComponentFormDialogComponent,
+    AttachmentsFormDialogComponent,EditProjectOverviewDialogComponent, OrdersFormDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -39,7 +65,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatToolbarModule,
     MatIconModule,
     DemoMaterialModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatDialogModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
