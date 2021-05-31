@@ -17,7 +17,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from "@angular/material/icon";
 import { DemoMaterialModule } from "./material-module";
 import { MatSidenavModule} from '@angular/material/sidenav';
-import { ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { EditProjectOverviewDialogComponent } from './components/pop-ups/edit-project-overview-dialog/edit-project-overview-dialog.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ReactiveFormsModule} from "@angular/forms";
     ShopComponent,
     PopUpsComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    EditProjectOverviewDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { ReactiveFormsModule} from "@angular/forms";
     MatIconModule,
     DemoMaterialModule,
     MatSidenavModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
 
   ],
   providers: [],
