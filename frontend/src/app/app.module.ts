@@ -16,8 +16,10 @@ import { MatToolbarModule} from "@angular/material/toolbar";
 import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from "@angular/material/icon";
 import { DemoMaterialModule } from "./material-module";
-import {MatSidenavModule} from '@angular/material/sidenav';
-
+import { MatSidenavModule} from '@angular/material/sidenav';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { EditProjectOverviewDialogComponent } from './components/pop-ups/edit-project-overview-dialog/edit-project-overview-dialog.component';
+import { FieldDialogComponent } from './components/pop-ups/field-dialog/field-dialog.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     ShopComponent,
     PopUpsComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    EditProjectOverviewDialogComponent,
+    FieldDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatToolbarModule,
     MatIconModule,
     DemoMaterialModule,
-    MatSidenavModule
+    MatSidenavModule,
+    ReactiveFormsModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

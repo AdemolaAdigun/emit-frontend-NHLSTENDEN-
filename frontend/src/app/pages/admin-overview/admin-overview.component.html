@@ -1,1 +1,115 @@
-<p>admin-overview works!</p>
+<header>
+  <mat-toolbar color="primary">
+    <button aria-label="menu" class="menu" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Admin Dashboard</span>
+    <span class="example-spacer"></span>
+    <button aria-label="account-circle" class="add" mat-icon-button>
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <button aria-label="logout" class="logout" mat-icon-button>
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+</header>
+
+<mat-tab-group>
+  <mat-tab label="Create User">
+    <div class="formnotworking">
+      <mat-accordion class="example-headers-align">
+        <mat-expansion-panel (opened)="setStep(0)" [expanded]="step === 0" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              User data
+            </mat-panel-title>
+            <mat-panel-description>
+              First and Last name
+              <mat-icon>account_circle</mat-icon>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <mat-form-field>
+            <mat-label>First name</mat-label>
+            <input matInput>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Last name</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput>
+          </mat-form-field>
+          <mat-action-row>
+            <button (click)="nextStep()" color="primary" mat-button>Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel (opened)="setStep(1)" [expanded]="step === 1" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Role
+            </mat-panel-title>
+            <mat-panel-description>
+              Select Admin or Standard User
+              <mat-icon><span class="material-icons-outlined">admin_panel_settings</span></mat-icon>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+
+          <mat-label>Admin/Standard</mat-label>
+          <mat-form-field class="example-full-width">
+            <mat-label>Number</mat-label>
+            <select matNativeControl required>
+              <option value="Admin">Admin</option>
+              <option value="Standard">Standard</option>
+            </select>
+          </mat-form-field>
+
+          <mat-action-row>
+            <button (click)="prevStep()" color="warn" mat-button>Previous</button>
+            <button (click)="nextStep()" color="primary" mat-button>Next</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel (opened)="setStep(2)" [expanded]="step === 2" hideToggle>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Avatar
+            </mat-panel-title>
+            <mat-panel-description>
+              Enter Image URL
+              <mat-icon><span class="material-icons-outlined">file_upload</span></mat-icon>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <mat-form-field>
+            <mat-label>Avatar URL</mat-label>
+            <input matInput>
+          </mat-form-field>
+
+          <mat-action-row>
+            <button (click)="prevStep()" color="warn" mat-button>Previous</button>
+            <button (click)="nextStep()" color="primary" mat-button>Submit</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+
+      </mat-accordion>
+    </div>
+  </mat-tab>
+  <mat-tab label="Delete User">
+    Delete User Works!
+  </mat-tab>
+  <mat-tab label="Shopping">
+    <app-shop></app-shop>
+  </mat-tab>
+</mat-tab-group>
+
+
+<app-footer></app-footer>

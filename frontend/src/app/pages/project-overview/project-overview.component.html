@@ -1,55 +1,66 @@
 <app-header></app-header>
+
 <mat-tab-group>
-  <mat-tab label="Projects"></mat-tab>
+  <mat-tab label="Projects">
+    <mat-card class="project-cards">
+      <mat-card-header>
+        <div class="profile-avatar" mat-card-avatar></div>
+        <mat-card-title>Arduino UNO</mat-card-title>
+        <mat-card-subtitle>Mark Meerlo</mat-card-subtitle>
+      </mat-card-header>
+      <img alt="Photo of a Shiba Inu" mat-card-image
+           src="https://hallard.me/blog/wp-content/uploads/2013/09/ArduiLed-pcb.jpg">
+      <mat-card-content>
+        <p>Schematics for Arduino Uno</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="openDialog()">EDIT</button>
+        <button mat-button>DELETE</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="project-cards">
+      <mat-card-header>
+        <div class="profile-avatar" mat-card-avatar></div>
+        <mat-card-title>Intel Nuc</mat-card-title>
+        <mat-card-subtitle>Mark Meerlo</mat-card-subtitle>
+      </mat-card-header>
+      <img alt="Photo of a Shiba Inu" mat-card-image
+           src="https://hallard.me/blog/wp-content/uploads/2013/09/ArduiLed-pcb.jpg">
+      <mat-card-content>
+        <p> Schematics for Intel Nuc</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="openDialog()">EDIT</button>
+        <button mat-button>DELETE</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="project-cards">
+      <mat-card-header>
+        <div class="profile-avatar2" mat-card-avatar></div>
+        <mat-card-title>Lora Shield</mat-card-title>
+        <mat-card-subtitle>Arjan Kuiper</mat-card-subtitle>
+      </mat-card-header>
+      <img alt="Photo of a Shiba Inu" mat-card-image
+           src="https://hallard.me/blog/wp-content/uploads/2013/09/ArduiLed-pcb.jpg">
+      <mat-card-content>
+        <p>Schematics for Lora Shield</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="openDialog()">EDIT</button>
+        <button mat-button>DELETE</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-tab>
+
+  <mat-tab label="Inventory">
+    <app-inventory-overview></app-inventory-overview>
+  </mat-tab>
+
+  <mat-tab label="Fields">
+    <button mat-button (click)="openFieldDialog()">Add Field</button>
+  </mat-tab>
 </mat-tab-group>
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Ardunio UNO</mat-card-title>
-    <mat-card-subtitle>Mark Meerlo</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://hallard.me/blog/wp-content/uploads/2013/09/ArduiLed-pcb.jpg" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>
-      Schematics for Ardunio Uno
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>EDIT</button>
-    <button mat-button>DELETE</button>
-  </mat-card-actions>
-</mat-card>
 
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Intel Nuc</mat-card-title>
-    <mat-card-subtitle>Mark Meerlo</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://hallard.me/blog/wp-content/uploads/2013/09/ArduiLed-pcb.jpg" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>
-      Schematics for Intel Nuc
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>EDIT</button>
-    <button mat-button>DELETE</button>
-  </mat-card-actions>
-</mat-card>
-
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Lora Shield</mat-card-title>
-    <mat-card-subtitle>Arjan Kuiper</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="https://hallard.me/blog/wp-content/uploads/2013/09/ArduiLed-pcb.jpg" alt="Photo of a Shiba Inu">
-  <mat-card-content>
-    <p>
-      Schematics for Lora Shield
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>EDIT</button>
-    <button mat-button>DELETE</button>
-  </mat-card-actions>
-</mat-card>
 <app-footer></app-footer>
