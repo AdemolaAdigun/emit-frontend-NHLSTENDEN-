@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {ProjecrFormDialogComponent} from "../project-form/projecr-form-dialog/projecr-form-dialog.component";
+import {OrdersFormDialogComponent} from "./orders-form-dialog/orders-form-dialog.component";
 
 
 @Component({
@@ -17,7 +18,7 @@ export class OrdersFormComponent implements OnInit {
   constructor(public dialog: MatDialog, ) {}
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(ProjecrFormDialogComponent,
+    const dialogRef = this.dialog.open(OrdersFormDialogComponent,
       {data: { picker: this.picker, count:this.count, tCost:this.tCost}
       });
 

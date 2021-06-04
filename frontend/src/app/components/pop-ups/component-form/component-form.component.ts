@@ -13,6 +13,7 @@ export class ComponentFormComponent implements OnInit {
 
   public comDesc : string | undefined;
   public comName : string | undefined;
+  public template :any;
 
   constructor(public dialog: MatDialog, ) {}
 

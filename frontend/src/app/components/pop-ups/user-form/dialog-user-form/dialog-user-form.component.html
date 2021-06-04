@@ -17,14 +17,15 @@
     <mat-label>Password</mat-label>
     <input matInput [(ngModel)]="data.pass">
   </mat-form-field><br>
-  <mat-form-field>
-    <mat-label>Role</mat-label>
-    <input matInput [(ngModel)]="data.role">
-  </mat-form-field><br>
+  <mat-label>Role</mat-label>
+  <mat-select [formControl]="role">
+    <mat-option value="primary">User</mat-option>
+    <mat-option value="accent">Admin</mat-option>
+      </mat-select><br><br>
   <label for="input-file-id" class="md-button md-raised md-primary">Add an image</label><br>
   <input class="ng-hide" id="input-file-id" multiple type="file" />
   </div>
 <div mat-dialog-actions>
   <button mat-button (click)="openDialog()">Cancel</button>
-  <button mat-button [mat-dialog-close]="data.fName" cdkFocusInitial>Add</button>
+  <button mat-button [mat-dialog-close]="data.fName" cdkFocusInitial>Submit</button>
 </div>

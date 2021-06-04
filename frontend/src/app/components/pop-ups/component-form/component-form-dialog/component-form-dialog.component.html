@@ -9,6 +9,12 @@
 <!--    <mat-label>Attachment</mat-label>-->
 <!--    <textarea matInput [(ngModel)]="data.comDesc"></textarea>-->
 <!--  </mat-form-field>-->
+  <mat-label>Template</mat-label>
+  <mat-select [formControl]="template">
+    <mat-option value="primary">Primary</mat-option>
+    <mat-option value="accent">Accent</mat-option>
+    <mat-option value="warn">Warn</mat-option>
+  </mat-select><br>
   <label for="input-file-id" class="md-button md-raised md-primary">Attachment</label><br>
   <input  class="ng-hide" id="input-file-id" multiple type="file" />
 </div>

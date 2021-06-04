@@ -19,6 +19,7 @@ export class ProjecrFormDialogComponent implements OnInit {
   onNoClick(): void {
     this.dialogRef.close();
   }
+
   ngOnInit(): void {
   }
 

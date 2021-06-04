@@ -2,23 +2,24 @@
 <div mat-dialog-content>
   <p>Order Details</p>
   <mat-form-field appearance="fill">
-    <mat-label>Choose a date</mat-label>
-    <!-- #docregion toggle -->
-    <input matInput [matDatepicker]="picker" [(ngModel)]="data.picker">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-    <!-- #enddocregion toggle -->
-  </mat-form-field><br>
-  <mat-form-field appearance="fill">
     <mat-label>Count</mat-label>
     <input matInput [(ngModel)]="data.count">
   </mat-form-field><br>
   <mat-form-field appearance="fill">
     <mat-label>Transaction Cost</mat-label>
     <input matInput [(ngModel)]="data.tCost">
+  </mat-form-field><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <!-- #docregion toggle -->
+    <input matInput [matDatepicker]="picker" [(ngModel)]="data.picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <!-- #enddocregion toggle -->
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancel</button>
   <button mat-button [mat-dialog-close]="data.count" cdkFocusInitial>OK</button>
 </div>
+

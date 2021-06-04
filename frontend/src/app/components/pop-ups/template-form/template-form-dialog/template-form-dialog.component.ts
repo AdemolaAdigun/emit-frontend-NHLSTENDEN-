@@ -2,20 +2,17 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 
 export interface DialogData {
-
-  picker: any;
-  count: any;
-  tCost: any;
+  templateName: string;
 }
 
 @Component({
-  selector: 'app-orders-form-dialog',
-  templateUrl: './orders-form-dialog.component.html',
-  styleUrls: ['./orders-form-dialog.component.css']
+  selector: 'app-template-form-dialog',
+  templateUrl: './template-form-dialog.component.html',
+  styleUrls: ['./template-form-dialog.component.css']
 })
-export class OrdersFormDialogComponent implements OnInit {
+export class TemplateFormDialogComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<OrdersFormDialogComponent>,
+  constructor(public dialogRef: MatDialogRef<TemplateFormDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
   onNoClick(): void {

@@ -16,7 +16,7 @@ export class UserFormComponent implements OnInit {
   public pass : string | undefined;
   public role : string | undefined;
 
-  constructor(public dialog: MatDialog, ) {}
+  constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogUserFormComponent,

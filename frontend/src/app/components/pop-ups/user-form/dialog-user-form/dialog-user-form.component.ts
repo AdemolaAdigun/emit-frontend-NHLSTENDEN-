@@ -16,6 +16,8 @@ export interface DialogData {
   styleUrls: ['./dialog-user-form.component.css']
 })
 export class DialogUserFormComponent implements OnInit {
+  role: any;
+
   constructor(
     public dialogRef: MatDialogRef<DialogUserFormComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}

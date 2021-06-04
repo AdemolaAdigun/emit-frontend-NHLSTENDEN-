@@ -4,6 +4,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 export interface DialogData {
   comName: string;
   comDesc: string;
+  template: any;
 }
 
 @Component({
@@ -12,6 +13,7 @@ export interface DialogData {
   styleUrls: ['./component-form-dialog.component.css']
 })
 export class ComponentFormDialogComponent implements OnInit {
+  template: any;
 
   constructor(public dialogRef: MatDialogRef<ComponentFormDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
