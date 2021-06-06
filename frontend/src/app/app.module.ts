@@ -32,6 +32,7 @@ import { OrdersFormComponent } from './components/pop-ups/orders-form/orders-for
 import { OrdersFormDialogComponent } from './components/pop-ups/orders-form/orders-form-dialog/orders-form-dialog.component';
 import { TemplateFormComponent } from './components/pop-ups/template-form/template-form.component';
 import { TemplateFormDialogComponent } from './components/pop-ups/template-form/template-form-dialog/template-form-dialog.component';
+import { FieldFormDialogComponent } from './components/pop-ups/field-form-dialog/field-form-dialog.component';
 
 
 @NgModule({
@@ -58,10 +59,11 @@ import { TemplateFormDialogComponent } from './components/pop-ups/template-form/
     OrdersFormComponent,
     OrdersFormDialogComponent,
     TemplateFormComponent,
-    TemplateFormDialogComponent
+    TemplateFormDialogComponent,
+    FieldFormDialogComponent
   ],
   entryComponents:[DialogUserFormComponent, ProjecrFormDialogComponent,ComponentFormDialogComponent,
-    AttachmentsFormDialogComponent,EditProjectOverviewDialogComponent, OrdersFormDialogComponent, TemplateFormDialogComponent],
+    AttachmentsFormDialogComponent,EditProjectOverviewDialogComponent, OrdersFormDialogComponent,TemplateFormDialogComponent, FieldFormDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
