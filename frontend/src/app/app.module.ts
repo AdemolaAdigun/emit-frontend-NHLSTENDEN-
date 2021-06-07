@@ -10,6 +10,16 @@ import { ProjectOverviewComponent } from './pages/project-overview/project-overv
 import { InventoryOverviewComponent } from './pages/inventory-overview/inventory-overview.component';
 import { ShopComponent } from './pages/shop/shop.component';
 import { PopUpsComponent } from './components/pop-ups/pop-ups.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './components/footer/footer.component';
+import { MatToolbarModule} from "@angular/material/toolbar";
+import { HeaderComponent } from './components/header/header.component';
+import { MatIconModule } from "@angular/material/icon";
+import { DemoMaterialModule } from "./material-module";
+import { MatSidenavModule} from '@angular/material/sidenav';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { EditProjectOverviewDialogComponent } from './components/pop-ups/edit-project-overview-dialog/edit-project-overview-dialog.component';
+import { FieldDialogComponent } from './components/pop-ups/field-dialog/field-dialog.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +30,25 @@ import { PopUpsComponent } from './components/pop-ups/pop-ups.component';
     ProjectOverviewComponent,
     InventoryOverviewComponent,
     ShopComponent,
-    PopUpsComponent
+    PopUpsComponent,
+    FooterComponent,
+    HeaderComponent,
+    EditProjectOverviewDialogComponent,
+    FieldDialogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    DemoMaterialModule,
+    MatSidenavModule,
+    ReactiveFormsModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

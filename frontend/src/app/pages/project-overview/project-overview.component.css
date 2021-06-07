@@ -1,0 +1,27 @@
+.project-cards {
+  max-width: 200px;
+  height: 350px;
+  float: left;
+}
+
+.profile-avatar {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.profile-avatar2 {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/38/Adorable-animal-cat-20787.jpg');
+  background-size: cover;
+}
+mat-tab-group{
+  margin-top:80px;
+}
+mat-card{
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.add{
+  height: 200px;
+  width: 200px;
+  margin-top: 80px;
+}
