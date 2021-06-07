@@ -20,6 +20,8 @@ import { MatSidenavModule} from '@angular/material/sidenav';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { EditProjectOverviewDialogComponent } from './components/pop-ups/edit-project-overview-dialog/edit-project-overview-dialog.component';
 import { FieldDialogComponent } from './components/pop-ups/field-dialog/field-dialog.component';
+import { TemplateDialogComponent } from './components/pop-ups/template-dialog/template-dialog.component';
+import { ComponentDialogComponent } from './components/pop-ups/component-dialog/component-dialog.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { FieldDialogComponent } from './components/pop-ups/field-dialog/field-di
     FooterComponent,
     HeaderComponent,
     EditProjectOverviewDialogComponent,
-    FieldDialogComponent
+    FieldDialogComponent,
+    TemplateDialogComponent,
+    ComponentDialogComponent
   ],
   imports: [
     BrowserModule,

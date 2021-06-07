@@ -16,7 +16,10 @@
 
 <mat-tab-group>
   <mat-tab label="Components">
+    <button mat-raised-button (click)="openDialogComponent()">Add Component</button>
   </mat-tab>
+
+
   <mat-tab label="Templates">
     <div class="inventory-cards">
       <mat-card class="example-card">
@@ -26,6 +29,8 @@
           <mat-card-subtitle>Dog Breed</mat-card-subtitle>
         </mat-card-header>
       </mat-card>
+      <button mat-raised-button (click)="openDialogTemplates()">Add Templates</button>
+
 
       <mat-card class="example-card">
         <mat-card-header>
@@ -63,7 +68,7 @@
   </mat-tab>
 
   <mat-tab label="Fields">
-    <button mat-button>Add Field</button>
+    <button mat-raised-button (click)="openDialog()">Add Field</button>
   </mat-tab>
 </mat-tab-group>
 
