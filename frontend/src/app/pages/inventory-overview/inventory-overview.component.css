@@ -2,22 +2,31 @@
   margin-right: 8px;
 }
 
-.pgntr{
-  bottom: 10px;
-  width: 50%;
-  float:left;
+.example-spacer {
+  flex: 1 1 auto;
 }
 
-.inventory-cards{
-  padding-top: 60px;
+mat-toolbar {
+  position: absolute;
+  top: 0;
+}
+
+.pgntr {
+  bottom: 10px;
+  width: 50%;
   float: left;
-  width:400px;
+}
+
+.inventory-cards {
+  /*padding-top: 60px;*/
+  float: left;
+  width: 400px;
 }
 
 .example-card {
-  margin-top:20px;
+  margin-top: 20px;
   max-width: 400px;
-  float:left;
+  float: left;
   margin-left: 20px;
   margin-bottom: 30px;
 }
@@ -25,4 +34,16 @@
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
+}
+
+.example-tab-icon {
+  margin-right: 8px;
+}
+
+.example-tab-icon {
+  margin-right: 8px;
+}
+
+mat-tab-group {
+  margin-top: 70px;
 }

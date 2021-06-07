@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { InventoryOverviewComponent } from './inventory-overview.component';
+import {InventoryOverviewComponent} from './inventory-overview.component';
 
 describe('InventoryOverviewComponent', () => {
   let component: InventoryOverviewComponent;
@@ -8,9 +8,9 @@ describe('InventoryOverviewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InventoryOverviewComponent ]
+      declarations: [InventoryOverviewComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
