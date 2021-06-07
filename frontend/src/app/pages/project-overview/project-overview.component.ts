@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog} from "@angular/material/dialog";
-import {EditProjectOverviewDialogComponent} from "../../components/pop-ups/edit-project-overview-dialog/edit-project-overview-dialog.component";
-import {FieldDialogComponent} from "../../components/pop-ups/field-dialog/field-dialog.component";
+import { MatDialog} from "@angular/material/dialog";
+import { EditProjectOverviewDialogComponent} from "../../components/pop-ups/edit-project-overview-dialog/edit-project-overview-dialog.component";
+import { FieldDialogComponent} from "../../components/pop-ups/field-dialog/field-dialog.component";
+// import { ProjectFormDialogComponent } from "../../components/pop-ups/project-form/projecr-form-dialog/projecr-form-dialog.component"
 
 @Component({
   selector: 'app-project-overview',
@@ -10,19 +11,21 @@ import {FieldDialogComponent} from "../../components/pop-ups/field-dialog/field-
 })
 export class ProjectOverviewComponent implements OnInit {
 
-  public name : string | undefined;
-  public desc : string | undefined;
+  public edit_name : string | undefined;
+  public edit_desc : string | undefined;
   public fieldName : string | undefined;
+  public create_name : string | undefined;
+  public create_desc : string | undefined;
 
   constructor(public dialog: MatDialog) { }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EditProjectOverviewDialogComponent,
-      {data: { name: this.name, desc:this.desc}
+      {data: { name: this.edit_name, desc:this.edit_desc}
       });
 
     dialogRef.afterClosed().subscribe(result =>{
-      console.log('The dialog was closed'); this.name, this.desc = result});
+      console.log('The dialog was closed'); this.edit_name, this.edit_desc = result});
   }
 
   openFieldDialog(): void {
@@ -33,6 +36,15 @@ export class ProjectOverviewComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result =>{
       console.log('The dialog was closed'); this.fieldName = result});
   }
+
+  // new_Project_Dialog(): void {
+  //   const dialogRef = this.dialog.open(ProjecrFormDialogComponent,
+  //     {data: { name: this.create_name, desc:this.create_desc}
+  //     });
+  //
+  //   dialogRef.afterClosed().subscribe(result =>{
+  //     console.log('The dialog was closed'); this.create_name, this.create_desc = result});
+  // }
 
   ngOnInit(): void {
   }
