@@ -16,12 +16,14 @@ mat-tab-group{
   margin-top:80px;
 }
 mat-card{
-  margin-top: 30px;
+  margin-top: 80px;
   margin-left: 30px;
+
 }
 
 .add{
-  height: 200px;
-  width: 200px;
-  margin-top: 80px;
+  margin-top: 10px;
+  margin-right: 10px;
+  float: right;
+  color: white;
 }

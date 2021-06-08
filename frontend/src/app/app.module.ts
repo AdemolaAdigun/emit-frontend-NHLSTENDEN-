@@ -20,6 +20,9 @@ import { MatSidenavModule} from '@angular/material/sidenav';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { EditProjectOverviewDialogComponent } from './components/pop-ups/edit-project-overview-dialog/edit-project-overview-dialog.component';
 import { FieldDialogComponent } from './components/pop-ups/field-dialog/field-dialog.component';
+import {MatMenuModule } from '@angular/material/menu';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import {MatNativeDateModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -45,7 +48,9 @@ import { FieldDialogComponent } from './components/pop-ups/field-dialog/field-di
     DemoMaterialModule,
     MatSidenavModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatMenuModule,
+    MatNativeDateModule
 
   ],
   providers: [],

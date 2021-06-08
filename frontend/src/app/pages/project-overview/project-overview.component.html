@@ -1,7 +1,9 @@
 <app-header></app-header>
-
-<mat-tab-group>
-  <mat-tab label="Projects">
+<!--TODO-->
+<!--Rename openDialog to new_Project_Dialog in line 4-->
+<button mat-icon-button class="add" aria-label="add" (click)="openDialog()">
+  <mat-icon>add</mat-icon>
+</button>
     <mat-card class="project-cards">
       <mat-card-header>
         <div class="profile-avatar" mat-card-avatar></div>
@@ -52,15 +54,4 @@
         <button mat-button>DELETE</button>
       </mat-card-actions>
     </mat-card>
-  </mat-tab>
-
-  <mat-tab label="Inventory">
-    <app-inventory-overview></app-inventory-overview>
-  </mat-tab>
-
-  <mat-tab label="Fields">
-    <button mat-button (click)="openFieldDialog()">Add Field</button>
-  </mat-tab>
-</mat-tab-group>
-
 <app-footer></app-footer>
