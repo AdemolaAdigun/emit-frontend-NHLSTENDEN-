@@ -4,6 +4,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 export interface DialogData {
   componentName: string;
   fieldName: string;
+
 }
 
 @Component({
@@ -12,6 +13,7 @@ export interface DialogData {
   styleUrls: ['./field-dialog.component.css']
 })
 export class FieldDialogComponent implements OnInit {
+
 
   constructor(public dialogRef: MatDialogRef<FieldDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public data: DialogData) { }

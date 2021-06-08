@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Field Answers</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="outline">
+    <mat-label>Answer</mat-label>
+    <textarea matInput [(ngModel)]="data.answer"></textarea>
+  </mat-form-field><br>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data.answer" cdkFocusInitial>OK</button>
+</div>

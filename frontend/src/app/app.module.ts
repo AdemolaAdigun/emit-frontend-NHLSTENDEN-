@@ -22,6 +22,7 @@ import { EditProjectOverviewDialogComponent } from './components/pop-ups/edit-pr
 import { FieldDialogComponent } from './components/pop-ups/field-dialog/field-dialog.component';
 import { TemplateDialogComponent } from './components/pop-ups/template-dialog/template-dialog.component';
 import { ComponentDialogComponent } from './components/pop-ups/component-dialog/component-dialog.component';
+import { FieldAnswersDialogComponent } from './components/pop-ups/field-answers-dialog/field-answers-dialog.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ComponentDialogComponent } from './components/pop-ups/component-dialog/
     EditProjectOverviewDialogComponent,
     FieldDialogComponent,
     TemplateDialogComponent,
-    ComponentDialogComponent
+    ComponentDialogComponent,
+    FieldAnswersDialogComponent
   ],
   imports: [
     BrowserModule,
