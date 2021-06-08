@@ -1,8 +1,20 @@
-<mat-form-field>
-  <mat-label>Field name</mat-label>
-  <input matInput [(ngModel)]="data.fieldNamename">
-</mat-form-field>
+<h1 mat-dialog-title>Create a Field</h1>
+
+<div mat-dialog-content>
+  <p>Field details</p>
+
+  <mat-form-field>
+    <mat-label>Component Name</mat-label>
+    <input matInput [(ngModel)]="data.componentName">
+  </mat-form-field><br>
+
+  <mat-form-field>
+    <mat-label>Field Name</mat-label>
+    <input matInput [(ngModel)]="data.fieldName">
+  </mat-form-field><br>
+</div>
+
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Cancel</button>
-  <button mat-button [mat-dialog-close]="data.fieldNamename" cdkFocusInitial>Submit</button>
+  <button mat-button [mat-dialog-close]="data.fieldName" cdkFocusInitial>Submit</button>
 </div>
