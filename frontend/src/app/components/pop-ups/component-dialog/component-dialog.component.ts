@@ -12,6 +12,7 @@ export interface DialogData {
   styleUrls: ['./component-dialog.component.css']
 })
 export class ComponentDialogComponent implements OnInit {
+  
   template: any;
 
   constructor(public dialogRef: MatDialogRef<ComponentDialogComponent>,
