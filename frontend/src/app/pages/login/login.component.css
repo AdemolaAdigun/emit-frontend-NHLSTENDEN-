@@ -28,23 +28,16 @@ h2{
   font-size: 16px;
   height: auto;
   padding: 10px;
-@include box-sizing(border-box);
 }
 
 input[type="text"]{
   margin-bottom: -1px;
-  border-radius: 10px;
   width: 337px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 input[type="password"]{
   margin-bottom: 20px;
-  border-radius: 10px;
   width: 337px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 
 .btn{

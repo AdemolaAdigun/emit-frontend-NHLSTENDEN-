@@ -1,4 +1,40 @@
-<app-header></app-header>
+<header>
+  <mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="afterMenu" class="menu" aria-label="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <mat-menu #afterMenu="matMenu" class="bruh">
+      <a href="/project-overview">
+        <button mat-button class="menu-button">
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </button>
+      </a><br>
+      <a href="/inventory-overview">
+        <button mat-button class="menu-button">
+          <mat-icon>inventory_2</mat-icon>
+          <span>Inventory Overview</span>
+        </button>
+        <br></a>
+      <a href="/admin">
+        <button mat-button class="menu-button">
+          <mat-icon>person</mat-icon>
+          <span>Admin</span>
+        </button>
+        <br></a>
+      <a href="/project-overview">
+        <button mat-button class="menu-button">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>
+      </a>
+    </mat-menu>
+
+    <span>Project Overview</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+</header>
 <!--TODO-->
 <!--Rename openDialog to new_Project_Dialog in line 4-->
 <button mat-icon-button class="add" aria-label="add" (click)="openDialog()">

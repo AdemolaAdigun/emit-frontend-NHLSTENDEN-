@@ -1,16 +1,38 @@
 <header>
   <mat-toolbar color="primary">
-    <button aria-label="menu" class="menu" mat-icon-button>
+    <button mat-icon-button [matMenuTriggerFor]="afterMenu" class="menu" aria-label="menu">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>Admin Dashboard</span>
+
+    <mat-menu #afterMenu="matMenu" class="bruh">
+      <a href="/project-overview">
+        <button mat-button class="menu-button">
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </button>
+      </a><br>
+      <a href="/inventory-overview">
+        <button mat-button class="menu-button">
+          <mat-icon>inventory_2</mat-icon>
+          <span>Inventory Overview</span>
+        </button>
+        <br></a>
+      <a href="/admin">
+        <button mat-button class="menu-button">
+          <mat-icon>person</mat-icon>
+          <span>Profile</span>
+        </button>
+        <br></a>
+      <a href="/project-overview">
+        <button mat-button class="menu-button">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>
+      </a>
+    </mat-menu>
+
+    <span>Admin</span>
     <span class="example-spacer"></span>
-    <button aria-label="account-circle" class="add" mat-icon-button>
-      <mat-icon>account_circle</mat-icon>
-    </button>
-    <button aria-label="logout" class="logout" mat-icon-button>
-      <mat-icon>logout</mat-icon>
-    </button>
   </mat-toolbar>
 </header>
 

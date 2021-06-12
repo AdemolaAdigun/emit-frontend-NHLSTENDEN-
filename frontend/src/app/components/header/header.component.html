@@ -5,22 +5,30 @@
     </button>
 
     <mat-menu #afterMenu="matMenu" class="bruh">
-      <button mat-button class="menu-button">
-        <mat-icon>home</mat-icon>
-        <span>Home</span>
-      </button><br>
-      <button mat-button class="menu-button">
-        <mat-icon>inventory_2</mat-icon>
-        <span>Inventory Overview</span>
-      </button><br>
-      <button mat-button class="menu-button">
-        <mat-icon>person</mat-icon>
-        <span>Profile</span>
-      </button><br>
-      <button mat-button class="menu-button">
-        <mat-icon>logout</mat-icon>
-        <span>Logout</span>
-      </button>
+      <a href="/project-overview">
+        <button mat-button class="menu-button">
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </button>
+      </a><br>
+      <a href="/project-overview">
+        <button mat-button class="menu-button">
+          <mat-icon>inventory_2</mat-icon>
+          <span>Inventory Overview</span>
+        </button>
+        <br></a>
+      <a href="/project-overview">
+        <button mat-button class="menu-button">
+          <mat-icon>person</mat-icon>
+          <span>Profile</span>
+        </button>
+        <br></a>
+      <a href="/project-overview">
+        <button mat-button class="menu-button">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>
+      </a>
     </mat-menu>
 
     <span>Project Overview</span>

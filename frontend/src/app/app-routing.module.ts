@@ -9,7 +9,7 @@ import { AdminOverviewComponent } from './pages/admin-overview/admin-overview.co
 
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
   { path: 'project-overview', component: ProjectOverviewComponent },
   { path: 'inventory-overview', component: InventoryOverviewComponent },
   { path: 'shop', component: ShopComponent },
