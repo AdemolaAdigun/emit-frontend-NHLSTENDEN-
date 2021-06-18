@@ -5,6 +5,7 @@ export class User {
   email: string;
   password: string;
   role: string;
+  status: number;
   createdAt: string;
 
   constructor(user: User) {
@@ -15,5 +16,6 @@ export class User {
     this.password = user.password;
     this.role = user.role;
     this.createdAt = user.createdAt;
+    this.status = 0;
   }
 }

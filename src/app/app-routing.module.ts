@@ -6,15 +6,16 @@ import { InventoryOverviewComponent } from './pages/inventory-overview/inventory
 import { ShopComponent } from './pages/shop/shop.component';
 import { UserOverviewComponent } from './pages/user-overview/user-overview.component';
 import { AdminOverviewComponent } from './pages/admin-overview/admin-overview.component';
+import {GuardService} from "./guard-service/guard.service";
 
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'project-overview', component: ProjectOverviewComponent },
-  { path: 'inventory-overview', component: InventoryOverviewComponent },
-  { path: 'shop', component: ShopComponent },
-  { path: 'user', component: UserOverviewComponent },
-  { path: 'admin', component: AdminOverviewComponent },
+  { path: 'login', component: LoginComponent, canActivate: [GuardService] },
+  { path: 'project-overview', component: ProjectOverviewComponent, canActivate: [GuardService] },
+  { path: 'inventory-overview', component: InventoryOverviewComponent, canActivate: [GuardService] },
+  { path: 'shop', component: ShopComponent, canActivate: [GuardService] },
+  { path: 'user', component: UserOverviewComponent, canActivate: [GuardService] },
+  { path: 'admin', component: AdminOverviewComponent, canActivate: [GuardService] },
 ];
 
 @NgModule({

@@ -26,6 +26,7 @@ import { FieldAnswersDialogComponent } from './components/pop-ups/field-answers-
 import {MatMenuModule } from '@angular/material/menu';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import {MatNativeDateModule} from "@angular/material/core";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import {MatNativeDateModule} from "@angular/material/core";
     MatIconModule,
     DemoMaterialModule,
     MatSidenavModule,
+    HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
     MatMenuModule,

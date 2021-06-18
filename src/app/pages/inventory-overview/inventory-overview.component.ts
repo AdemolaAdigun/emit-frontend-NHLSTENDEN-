@@ -3,6 +3,8 @@ import {MatDialog} from "@angular/material/dialog";
 import {FieldDialogComponent} from "../../components/pop-ups/field-dialog/field-dialog.component";
 import {TemplateDialogComponent} from "../../components/pop-ups/template-dialog/template-dialog.component";
 import {ComponentDialogComponent} from "../../components/pop-ups/component-dialog/component-dialog.component";
+import {NavigationService} from "../../services/navigation.service";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-inventory-overview',
@@ -18,7 +20,9 @@ export class InventoryOverviewComponent implements OnInit {
   public comName : string | undefined;
   public template :any;
 
-  constructor(public dialog: MatDialog, ) {}
+  constructor(public dialog: MatDialog,
+              private navigationService: NavigationService,
+              private auth: AuthService) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(FieldDialogComponent,
@@ -48,6 +52,11 @@ export class InventoryOverviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  public logout(): void {
+    this.auth.resetLocalStorage();
+    this.navigationService.navigateTo('');
   }
 
 }

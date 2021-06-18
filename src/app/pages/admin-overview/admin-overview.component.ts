@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon'
 import { DomSanitizer } from '@angular/platform-browser'
+import {NavigationService} from "../../services/navigation.service";
+import {AuthService} from "../../services/auth.service";
 
 @Component({
   selector: 'app-admin-overview',
@@ -24,8 +26,10 @@ export class AdminOverviewComponent implements OnInit {
   }
 
   constructor(
+    private navigationService: NavigationService,
     private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
+    private domSanitizer: DomSanitizer,
+    private auth: AuthService,
   ) {
     this.matIconRegistry.addSvgIcon(
       'close_custom',
@@ -34,5 +38,10 @@ export class AdminOverviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  public logout(): void {
+    this.auth.resetLocalStorage();
+    this.navigationService.navigateTo('');
   }
 }
