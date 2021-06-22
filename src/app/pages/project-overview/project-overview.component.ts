@@ -4,6 +4,9 @@ import {EditProjectOverviewDialogComponent} from "../../components/pop-ups/edit-
 import {FieldDialogComponent} from "../../components/pop-ups/field-dialog/field-dialog.component";
 import {NavigationService} from "../../services/navigation.service";
 import {AuthService} from "../../services/auth.service";
+import {ProjectOverviewService} from "./project-overview.service";
+import {Project} from "../../classes/project";
+import {ConvertResponseToObjService} from "../../services/convert-response-to-obj.service";
 
 // import { ProjectFormDialogComponent } from "../../components/pop-ups/project-form/projecr-form-dialog/projecr-form-dialog.component"
 
@@ -19,10 +22,14 @@ export class ProjectOverviewComponent implements OnInit {
   public fieldName: string | undefined;
   public create_name: string | undefined;
   public create_desc: string | undefined;
+  public allProjects: Project[];
 
   constructor(public dialog: MatDialog,
               private navigationService: NavigationService,
-              private auth: AuthService) {
+              private projectOverviewService: ProjectOverviewService,
+              private auth: AuthService,
+              private convertResponseToObjService: ConvertResponseToObjService) {
+    this.allProjects = [];
   }
 
   openDialog(): void {
@@ -35,6 +42,15 @@ export class ProjectOverviewComponent implements OnInit {
       console.log('The dialog was closed');
       this.edit_name, this.edit_desc = result
     });
+  }
+
+  private getAllProjects(): void {
+    this.projectOverviewService.getProjects().subscribe(
+      (projects: any) => {
+        this.allProjects = this.convertResponseToObjService.convertToProjectsArray(projects);
+      },
+      () => alert('An error occurred when trying to load projects')
+    );
   }
 
   openFieldDialog(): void {
@@ -54,16 +70,8 @@ export class ProjectOverviewComponent implements OnInit {
     this.navigationService.navigateTo('');
   }
 
-  // new_Project_Dialog(): void {
-  //   const dialogRef = this.dialog.open(ProjecrFormDialogComponent,
-  //     {data: { name: this.create_name, desc:this.create_desc}
-  //     });
-  //
-  //   dialogRef.afterClosed().subscribe(result =>{
-  //     console.log('The dialog was closed'); this.create_name, this.create_desc = result});
-  // }
-
   ngOnInit(): void {
+    this.getAllProjects();
   }
 
 }

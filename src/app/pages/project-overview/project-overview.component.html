@@ -23,10 +23,10 @@
           <span>Admin</span>
         </button>
         <br></a>
-        <button mat-button class="menu-button" (click)="logout()">
-          <mat-icon>logout</mat-icon>
-          <span>Logout</span>
-        </button>
+      <button mat-button class="menu-button" (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
     </mat-menu>
 
     <span>Project Overview</span>
@@ -35,57 +35,33 @@
 </header>
 <!--TODO-->
 <!--Rename openDialog to new_Project_Dialog in line 4-->
-<button mat-icon-button class="add" aria-label="add" (click)="openDialog()">
-  <mat-icon>add</mat-icon>
-</button>
-    <mat-card class="project-cards">
-      <mat-card-header>
-        <div class="profile-avatar" mat-card-avatar></div>
-        <mat-card-title>Arduino UNO</mat-card-title>
-        <mat-card-subtitle>Mark Meerlo</mat-card-subtitle>
-      </mat-card-header>
-      <img alt="Photo of a Shiba Inu" mat-card-image
-           src="https://hallard.me/blog/wp-content/uploads/2013/09/ArduiLed-pcb.jpg">
-      <mat-card-content>
-        <p>Schematics for Arduino Uno</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button (click)="openDialog()">EDIT</button>
-        <button mat-button>DELETE</button>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card class="project-cards">
-      <mat-card-header>
-        <div class="profile-avatar" mat-card-avatar></div>
-        <mat-card-title>Intel Nuc</mat-card-title>
-        <mat-card-subtitle>Mark Meerlo</mat-card-subtitle>
-      </mat-card-header>
-      <img alt="Photo of a Shiba Inu" mat-card-image
-           src="https://hallard.me/blog/wp-content/uploads/2013/09/ArduiLed-pcb.jpg">
-      <mat-card-content>
-        <p> Schematics for Intel Nuc</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button (click)="openDialog()">EDIT</button>
-        <button mat-button>DELETE</button>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card class="project-cards">
-      <mat-card-header>
-        <div class="profile-avatar2" mat-card-avatar></div>
-        <mat-card-title>Lora Shield</mat-card-title>
-        <mat-card-subtitle>Arjan Kuiper</mat-card-subtitle>
-      </mat-card-header>
-      <img alt="Photo of a Shiba Inu" mat-card-image
-           src="https://hallard.me/blog/wp-content/uploads/2013/09/ArduiLed-pcb.jpg">
-      <mat-card-content>
-        <p>Schematics for Lora Shield</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button (click)="openDialog()">EDIT</button>
-        <button mat-button>DELETE</button>
-      </mat-card-actions>
-    </mat-card>
+<!--<button mat-icon-button class="add" aria-label="add" (click)="openDialog()">-->
+<!--  <mat-icon>add</mat-icon>-->
+<!--</button>-->
+<div class="lol" *ngFor="let project of allProjects">
+<!--  <p>{{project.name}}</p>-->
+<!--  <p>{{project.User.firstname}}</p>-->
+<!--  -->
+<!--  <p>{{attachment.attachment}}</p>-->
+<!--  -->
+<!--  <p>{{project.description}}</p>-->
+  <mat-card class="project-cards">
+    <mat-card-header>
+      <div class="profile-avatar" mat-card-avatar></div>
+      <mat-card-title>{{project.name}}</mat-card-title>
+      <mat-card-subtitle>{{project.User.firstname}}</mat-card-subtitle>
+    </mat-card-header>
+    <div *ngFor="let attachment of project.Attachments">
+    <img alt="Photo of a Shiba Inu" mat-card-image
+         src="{{attachment.attachment}}">
+    </div>
+    <mat-card-content>
+      <p>{{project.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="openDialog()">EDIT</button>
+      <button mat-button>DELETE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
 <app-footer></app-footer>

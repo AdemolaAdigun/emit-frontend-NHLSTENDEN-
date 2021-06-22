@@ -1,12 +1,13 @@
 import {Component} from "./component";
+import { Attachment } from "./attachment";
 import {User} from "./user";
 
 export class Project {
   id: string;
   name: string;
   description: string;
-  attachments: string;
-  user: User;
+  Attachments: Attachment[];
+  User: User;
   components: Component[];
   createdAt: string;
 
@@ -14,8 +15,8 @@ export class Project {
     this.id = project.id;
     this.name = project.name;
     this.description = project.description;
-    this.attachments = project.attachments;
-    this.user = project.user;
+    this.Attachments = project.Attachments;
+    this.User = project.User;
     this.components = project.components;
     this.createdAt = project.createdAt;
   }

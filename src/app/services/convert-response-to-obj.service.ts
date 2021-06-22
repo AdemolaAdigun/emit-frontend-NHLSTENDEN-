@@ -13,7 +13,7 @@ export class ConvertResponseToObjService {
   constructor() {
   }
 
-  public convertToComponentsArray(response: Response): Component[] {
+  public convertToComponentsArray(response: any): Component[] {
     let components: Component[] = [];
 
     for (let component of response['data'] as Component[]) {
@@ -23,7 +23,7 @@ export class ConvertResponseToObjService {
     return components;
   }
 
-  public convertToFieldsArray(response: Response): Field[] {
+  public convertToFieldsArray(response: any): Field[] {
     let fields: Field[] = [];
 
     for (const field of response['data'] as Field[]) {
@@ -33,17 +33,18 @@ export class ConvertResponseToObjService {
     return fields;
   }
 
-  public convertToProjectsArray(response: Response): Project[] {
+  public convertToProjectsArray(response: any): Project[] {
     let projects: Project[] = [];
 
     for (const project of response['data'] as Project[]) {
+      for (const attachment of project.Attachments)
       projects.push(new Project(project));
     }
 
     return projects;
   }
 
-  public convertToTemplatesArray(response: Response): Template[] {
+  public convertToTemplatesArray(response: any): Template[] {
     let templates: Template[] = [];
 
     for (const template of response['data'] as Template[]) {
@@ -53,7 +54,7 @@ export class ConvertResponseToObjService {
     return templates;
   }
 
-  public convertToUsersArray(response: Response): User[] {
+  public convertToUsersArray(response: any): User[] {
     let users: User[] = [];
 
     for (const user of response['data'] as User[]) {
@@ -63,11 +64,11 @@ export class ConvertResponseToObjService {
     return users;
   }
 
-  public convertToUser(response: Response): User {
+  public convertToUser(response: any): User {
     return new User(response['data'].user as User);
   }
 
-  public convertToProject(response: Response): Project {
+  public convertToProject(response: any): Project {
     return new Project(response['data'] as Project);
   }
 
