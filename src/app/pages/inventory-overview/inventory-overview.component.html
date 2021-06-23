@@ -23,10 +23,10 @@
           <span>Profile</span>
         </button>
         <br></a>
-        <button mat-button class="menu-button" (click)="logout()">
-          <mat-icon>logout</mat-icon>
-          <span>Logout</span>
-        </button>
+      <button mat-button class="menu-button" (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
     </mat-menu>
 
     <span>Inventory Overview</span>
@@ -35,55 +35,68 @@
 </header>
 
 <mat-tab-group>
-  <mat-tab label="Components">
-  </mat-tab>
-  <mat-tab label="Templates">
-    <div class="inventory-cards">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Shiba Inu</mat-card-title>
-          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        </mat-card-header>
-      </mat-card>
+  <div class="lol" *ngFor="let component of allComponents">
+    <mat-tab label="Components">
+      <div class="inventory-cards">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{component.name}}</mat-card-title>
+            <mat-card-subtitle>{{component.author.firstname}}</mat-card-subtitle>
+            <mat-card-subtitle>{{component.Template.name}}</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </div>
+    </mat-tab>
+  </div>
+<!--    </mat-tab>-->
+<!--    <mat-tab label="Templates">-->
+<!--      <div class="inventory-cards">-->
+<!--        <mat-card class="example-card">-->
+<!--          <mat-card-header>-->
+<!--            <div mat-card-avatar class="example-header-image"></div>-->
+<!--            <mat-card-title>Shiba Inu</mat-card-title>-->
+<!--            <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+<!--          </mat-card-header>-->
+<!--        </mat-card>-->
 
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Shiba Inu</mat-card-title>
-          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        </mat-card-header>
-      </mat-card>
+<!--        <mat-card class="example-card">-->
+<!--          <mat-card-header>-->
+<!--            <div mat-card-avatar class="example-header-image"></div>-->
+<!--            <mat-card-title>Shiba Inu</mat-card-title>-->
+<!--            <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+<!--          </mat-card-header>-->
+<!--        </mat-card>-->
 
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Shiba Inu</mat-card-title>
-          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        </mat-card-header>
-      </mat-card>
+<!--        <mat-card class="example-card">-->
+<!--          <mat-card-header>-->
+<!--            <div mat-card-avatar class="example-header-image"></div>-->
+<!--            <mat-card-title>Shiba Inu</mat-card-title>-->
+<!--            <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+<!--          </mat-card-header>-->
+<!--        </mat-card>-->
 
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Shiba Inu</mat-card-title>
-          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        </mat-card-header>
-      </mat-card>
+<!--        <mat-card class="example-card">-->
+<!--          <mat-card-header>-->
+<!--            <div mat-card-avatar class="example-header-image"></div>-->
+<!--            <mat-card-title>Shiba Inu</mat-card-title>-->
+<!--            <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+<!--          </mat-card-header>-->
+<!--        </mat-card>-->
 
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Shiba Inu</mat-card-title>
-          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        </mat-card-header>
-      </mat-card>
-    </div>
-  </mat-tab>
+<!--        <mat-card class="example-card">-->
+<!--          <mat-card-header>-->
+<!--            <div mat-card-avatar class="example-header-image"></div>-->
+<!--            <mat-card-title>Shiba Inu</mat-card-title>-->
+<!--            <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+<!--          </mat-card-header>-->
+<!--        </mat-card>-->
+<!--      </div>-->
+<!--    </mat-tab>-->
 
-  <mat-tab label="Fields">
-    <button mat-button>Add Field</button>
-  </mat-tab>
+<!--    <mat-tab label="Fields">-->
+<!--      <button mat-button>Add Field</button>-->
+<!--    </mat-tab>-->
 </mat-tab-group>
 
 <app-footer></app-footer>

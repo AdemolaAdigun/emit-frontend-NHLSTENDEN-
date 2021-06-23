@@ -1,5 +1,5 @@
 import {User} from "./user";
-import {Component} from "./component";
+import {ProjectComponent} from "./projectComponent";
 
 export class Order {
   id: string;
@@ -7,7 +7,7 @@ export class Order {
   count: number;
   createdAt: string;
   user: User;
-  component: Component;
+  component: ProjectComponent;
 
   constructor(order: Order) {
     this.id = order.id;

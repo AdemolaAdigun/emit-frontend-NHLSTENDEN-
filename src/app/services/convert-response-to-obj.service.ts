@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Component} from "../classes/component";
+import {ProjectComponent} from "../classes/projectComponent";
 import {Field} from "../classes/field";
 import {Project} from "../classes/project";
 import {Template} from "../classes/template";
@@ -13,11 +13,11 @@ export class ConvertResponseToObjService {
   constructor() {
   }
 
-  public convertToComponentsArray(response: any): Component[] {
-    let components: Component[] = [];
+  public convertToComponentsArray(response: any): ProjectComponent[] {
+    let components: ProjectComponent[] = [];
 
-    for (let component of response['data'] as Component[]) {
-      components.push(new Component(component));
+    for (let component of response['data'] as ProjectComponent[]) {
+      components.push(new ProjectComponent(component));
     }
 
     return components;

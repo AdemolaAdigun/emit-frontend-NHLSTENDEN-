@@ -1,20 +1,20 @@
 import {User} from "./user";
 import {Template} from "./template";
 
-export class Component {
+export class ProjectComponent {
   id: string;
   name: string;
   attachments: string;
-  user: User;
-  template: Template;
+  author: User;
+  Template: Template;
   createdAt: string;
 
-  constructor(component: Component) {
+  constructor(component: ProjectComponent) {
     this.id = component.id;
     this.name = component.name;
     this.attachments = component.attachments;
-    this.template = component.template;
-    this.user = component.user;
+    this.Template = component.Template;
+    this.author = component.author;
     this.createdAt = component.createdAt;
   }
 }

@@ -1,4 +1,4 @@
-import {Component} from "./component";
+import {ProjectComponent} from "./projectComponent";
 import { Attachment } from "./attachment";
 import {User} from "./user";
 
@@ -8,7 +8,7 @@ export class Project {
   description: string;
   Attachments: Attachment[];
   User: User;
-  components: Component[];
+  components: ProjectComponent[];
   createdAt: string;
 
   constructor(project: Project) {

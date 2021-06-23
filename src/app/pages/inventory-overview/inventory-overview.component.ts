@@ -5,6 +5,9 @@ import {TemplateDialogComponent} from "../../components/pop-ups/template-dialog/
 import {ComponentDialogComponent} from "../../components/pop-ups/component-dialog/component-dialog.component";
 import {NavigationService} from "../../services/navigation.service";
 import {AuthService} from "../../services/auth.service";
+import {ProjectComponent} from "../../classes/projectComponent";
+import {InventoryOverviewService} from "./inventory-overview.service";
+import {ConvertResponseToObjService} from "../../services/convert-response-to-obj.service";
 
 @Component({
   selector: 'app-inventory-overview',
@@ -19,10 +22,15 @@ export class InventoryOverviewComponent implements OnInit {
   public comDesc : string | undefined;
   public comName : string | undefined;
   public template :any;
+  public allComponents: ProjectComponent[];
 
   constructor(public dialog: MatDialog,
               private navigationService: NavigationService,
-              private auth: AuthService) {}
+              private inventoryOverviewService: InventoryOverviewService,
+              private convertResponseToObjService: ConvertResponseToObjService,
+              private auth: AuthService) {
+    this.allComponents = [];
+  }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(FieldDialogComponent,
@@ -52,6 +60,18 @@ export class InventoryOverviewComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getAllComponents();
+    console.log(this.getAllComponents());
+  }
+
+  private getAllComponents(): void {
+    this.inventoryOverviewService.getComponents().subscribe(
+      (components: any) => {
+        this.allComponents = this.convertResponseToObjService.convertToComponentsArray(components);
+        console.log(this.allComponents);
+      },
+      () => alert('An error occurred when trying to load components')
+    );
   }
 
   public logout(): void {
