@@ -5,9 +5,11 @@ import {TemplateDialogComponent} from "../../components/pop-ups/template-dialog/
 import {ComponentDialogComponent} from "../../components/pop-ups/component-dialog/component-dialog.component";
 import {NavigationService} from "../../services/navigation.service";
 import {AuthService} from "../../services/auth.service";
-import {ProjectComponent} from "../../classes/projectComponent";
+import {ProjectComponent} from "../../classes/project-component";
+import {Template} from "../../classes/template";
 import {InventoryOverviewService} from "./inventory-overview.service";
 import {ConvertResponseToObjService} from "../../services/convert-response-to-obj.service";
+import {Field} from "../../classes/field";
 
 @Component({
   selector: 'app-inventory-overview',
@@ -23,6 +25,8 @@ export class InventoryOverviewComponent implements OnInit {
   public comName : string | undefined;
   public template :any;
   public allComponents: ProjectComponent[];
+  public allTemplates: Template[];
+  public allFields: Field[];
 
   constructor(public dialog: MatDialog,
               private navigationService: NavigationService,
@@ -30,6 +34,8 @@ export class InventoryOverviewComponent implements OnInit {
               private convertResponseToObjService: ConvertResponseToObjService,
               private auth: AuthService) {
     this.allComponents = [];
+    this.allTemplates = [];
+    this.allFields = [];
   }
 
   openDialog(): void {
@@ -61,14 +67,35 @@ export class InventoryOverviewComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllComponents();
-    console.log(this.getAllComponents());
+    this.getAllTemplates();
+    this.getAllFields();
   }
 
   private getAllComponents(): void {
     this.inventoryOverviewService.getComponents().subscribe(
       (components: any) => {
+        console.log(components);
         this.allComponents = this.convertResponseToObjService.convertToComponentsArray(components);
-        console.log(this.allComponents);
+      },
+      () => alert('An error occurred when trying to load components')
+    );
+  }
+
+  private getAllTemplates(): void {
+    this.inventoryOverviewService.getTemplates().subscribe(
+      (templates: any) => {
+        this.allTemplates = this.convertResponseToObjService.convertToTemplatesArray(templates);
+      },
+      () => alert('An error occurred when trying to load components')
+    );
+  }
+
+  private getAllFields(): void {
+    this.inventoryOverviewService.getFields().subscribe(
+      (fields: any) => {
+        console.log(fields)
+        this.allFields = this.convertResponseToObjService.convertToFieldsArray(fields);
+        console.log(this.allFields);
       },
       () => alert('An error occurred when trying to load components')
     );

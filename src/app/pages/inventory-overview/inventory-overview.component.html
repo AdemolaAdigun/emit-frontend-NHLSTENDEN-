@@ -37,66 +37,51 @@
 <mat-tab-group>
   <div class="lol" *ngFor="let component of allComponents">
     <mat-tab label="Components">
+      <button mat-raised-button class="inventory-button" (click)="openDialogComponent()">Add Component</button>
       <div class="inventory-cards">
         <mat-card class="example-card">
           <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>{{component.name}}</mat-card-title>
-            <mat-card-subtitle>{{component.author.firstname}}</mat-card-subtitle>
-            <mat-card-subtitle>{{component.Template.name}}</mat-card-subtitle>
+            <div class="inventory-sub-cards">
+              <mat-card-title><b>Component Name:</b> {{component.name}}</mat-card-title>
+              <mat-card-subtitle><b>Author:</b> {{component.author.firstname}}</mat-card-subtitle>
+              <mat-card-subtitle><b>Template:</b> {{component.Template.name}}</mat-card-subtitle>
+              <div class="inventory-cards-content">
+                <div *ngFor="let field of component.Template.Fields">
+                  <mat-card-subtitle><b>Field:</b> {{field.fieldName}}</mat-card-subtitle>
+                  <div *ngFor="let answer of field.FieldAnswers">
+                    <mat-card-subtitle><b>Answer:</b> {{answer.answer}}</mat-card-subtitle>
+                  </div>
+                </div>
+              </div>
+            </div>
           </mat-card-header>
         </mat-card>
       </div>
     </mat-tab>
   </div>
-<!--    </mat-tab>-->
-<!--    <mat-tab label="Templates">-->
-<!--      <div class="inventory-cards">-->
-<!--        <mat-card class="example-card">-->
-<!--          <mat-card-header>-->
-<!--            <div mat-card-avatar class="example-header-image"></div>-->
-<!--            <mat-card-title>Shiba Inu</mat-card-title>-->
-<!--            <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
-<!--          </mat-card-header>-->
-<!--        </mat-card>-->
 
-<!--        <mat-card class="example-card">-->
-<!--          <mat-card-header>-->
-<!--            <div mat-card-avatar class="example-header-image"></div>-->
-<!--            <mat-card-title>Shiba Inu</mat-card-title>-->
-<!--            <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
-<!--          </mat-card-header>-->
-<!--        </mat-card>-->
-
-<!--        <mat-card class="example-card">-->
-<!--          <mat-card-header>-->
-<!--            <div mat-card-avatar class="example-header-image"></div>-->
-<!--            <mat-card-title>Shiba Inu</mat-card-title>-->
-<!--            <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
-<!--          </mat-card-header>-->
-<!--        </mat-card>-->
-
-<!--        <mat-card class="example-card">-->
-<!--          <mat-card-header>-->
-<!--            <div mat-card-avatar class="example-header-image"></div>-->
-<!--            <mat-card-title>Shiba Inu</mat-card-title>-->
-<!--            <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
-<!--          </mat-card-header>-->
-<!--        </mat-card>-->
-
-<!--        <mat-card class="example-card">-->
-<!--          <mat-card-header>-->
-<!--            <div mat-card-avatar class="example-header-image"></div>-->
-<!--            <mat-card-title>Shiba Inu</mat-card-title>-->
-<!--            <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
-<!--          </mat-card-header>-->
-<!--        </mat-card>-->
-<!--      </div>-->
-<!--    </mat-tab>-->
-
-<!--    <mat-tab label="Fields">-->
-<!--      <button mat-button>Add Field</button>-->
-<!--    </mat-tab>-->
+  <div class="lol" *ngFor="let template of allTemplates">
+    <mat-tab label="Templates">
+      <button mat-raised-button class="inventory-button" (click)="openDialogTemplates()">Add Templates</button>
+      <div class="inventory-cards">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <div class="inventory-sub-cards">
+              <mat-card-title>Template: {{template.name}}</mat-card-title>
+              <div class="inventory-cards-content">
+                <mat-card-subtitle><b>Fields</b></mat-card-subtitle>
+                <div *ngFor="let field of template.Fields">
+                  <mat-card-subtitle>{{field.fieldName}}</mat-card-subtitle>
+                </div>
+              </div>
+            </div>
+          </mat-card-header>
+        </mat-card>
+      </div>
+    </mat-tab>
+  </div>
 </mat-tab-group>
 
 <app-footer></app-footer>

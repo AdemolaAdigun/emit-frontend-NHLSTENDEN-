@@ -6,3 +6,8 @@ footer{
   bottom: 0;
   width: 100%;
 }
+
+mat-toolbar {
+  bottom: 0;
+  top: 0;
+}

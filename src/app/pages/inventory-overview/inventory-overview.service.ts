@@ -15,4 +15,12 @@ export class InventoryOverviewService {
     return this.http.get(`${environment.API_URL}components`);
   }
 
+  public getTemplates(): Observable<object> {
+    return this.http.get(`${environment.API_URL}components/templates/all`);
+  }
+
+  public getFields(): Observable<object> {
+    return this.http.get(`${environment.API_URL}components/getFields/all`);
+  }
+
 }

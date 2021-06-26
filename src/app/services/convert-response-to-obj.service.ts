@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {ProjectComponent} from "../classes/projectComponent";
+import {ProjectComponent} from "../classes/project-component";
 import {Field} from "../classes/field";
 import {Project} from "../classes/project";
 import {Template} from "../classes/template";

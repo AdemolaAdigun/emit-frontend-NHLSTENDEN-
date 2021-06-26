@@ -1,5 +1,5 @@
 import {User} from "./user";
-import {ProjectComponent} from "./projectComponent";
+import {ProjectComponent} from "./project-component";
 
 export class Order {
   id: string;

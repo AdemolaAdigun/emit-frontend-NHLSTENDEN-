@@ -1,4 +1,4 @@
-import {ProjectComponent} from "./projectComponent";
+import {ProjectComponent} from "./project-component";
 import { Attachment } from "./attachment";
 import {User} from "./user";
 

@@ -5,5 +5,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 button, a {
   cursor: pointer;
 }
+mat-toolbar {
+  position: absolute;
+}
 
 

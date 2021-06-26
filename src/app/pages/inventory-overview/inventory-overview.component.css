@@ -18,14 +18,28 @@ mat-toolbar {
 }
 
 .inventory-cards{
-  float: left;
-  width: 400px;
+  width: 100%;
+}
+
+.inventory-cards-content{
+  border-top: 1px solid;
+  padding-top: 10px;
+}
+
+.inventory-sub-cards{
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.inventory-button {
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .example-card {
   margin-top: 20px;
   max-width: 400px;
-  float: left;
   margin-left: 20px;
   margin-bottom: 30px;
 }

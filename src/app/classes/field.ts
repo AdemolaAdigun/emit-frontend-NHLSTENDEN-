@@ -1,11 +1,15 @@
+import {FieldAnswer} from "./field-answer";
+
 export class Field {
   id: string;
-  name: string;
+  fieldName: string;
+  FieldAnswers: FieldAnswer[];
   createdAt: string;
 
   constructor(field: Field) {
     this.id = field.id;
-    this.name = field.name;
+    this.fieldName = field.fieldName;
+    this.FieldAnswers = field.FieldAnswers
     this.createdAt = field.createdAt;
   }
 }
