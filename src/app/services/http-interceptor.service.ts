@@ -19,7 +19,6 @@ export class HttpInterceptorService implements HttpInterceptor {
      * token attached to get a 401 if the request is unauthorized. This gives us a good reason to send
      * user to the login page (there should always be some token) */
     if (this.auth.getToken()) {
-      console.log("sjfdoandoanwdkvsdnvl;krngvoedscnvakefnbrkjbdjfbjrng;q3raweg./");
       request = request.clone({
         setHeaders: {
           Authorization: `Bearer ${this.auth.getToken()}`
