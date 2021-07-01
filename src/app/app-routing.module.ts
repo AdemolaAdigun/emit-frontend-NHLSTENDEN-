@@ -10,13 +10,16 @@ import {GuardService} from "./guard-service/guard.service";
 
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent, canActivate: [GuardService] },
+  { path: '', component: LoginComponent },
   { path: 'project-overview', component: ProjectOverviewComponent, canActivate: [GuardService] },
   { path: 'inventory-overview', component: InventoryOverviewComponent, canActivate: [GuardService] },
   { path: 'shop', component: ShopComponent, canActivate: [GuardService] },
   { path: 'user', component: UserOverviewComponent, canActivate: [GuardService] },
   { path: 'admin', component: AdminOverviewComponent, canActivate: [GuardService] },
+  { path: '**', redirectTo: '' },
 ];
+
+
 
 @NgModule({
   declarations: [],
