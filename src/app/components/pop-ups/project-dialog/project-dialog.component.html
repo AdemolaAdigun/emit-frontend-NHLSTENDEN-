@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Create a Project</h1>
+<div mat-dialog-content>
+    <p>Project details</p>
+    <mat-form-field>
+      <mat-label class="input-name-title">Project name</mat-label>
+      <input class="input-name" matInput [(ngModel)]="data.comName">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Components</mat-label>
+      <select matNativeControl id="mySelectId">
+        <option value="" disabled selected></option>
+        <option value="component">Components</option>
+      </select>
+    </mat-form-field>
+    <br>
+    <label for="input-file-id" class="md-button md-raised md-primary">Attachment</label><br>
+    <input class="ng-hide" id="input-file-id" multiple type="file"/>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data.comName" cdkFocusInitial>Add</button>
+</div>

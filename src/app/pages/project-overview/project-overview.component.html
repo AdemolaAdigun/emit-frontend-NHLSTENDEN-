@@ -35,16 +35,8 @@
 </header>
 <!--TODO-->
 <!--Rename openDialog to new_Project_Dialog in line 4-->
-<!--<button mat-icon-button class="add" aria-label="add" (click)="openDialog()">-->
-<!--  <mat-icon>add</mat-icon>-->
-<!--</button>-->
+  <button mat-raised-button class="project-button" (click)="openProjectDialog()">Add Component</button>
 <div class="lol" *ngFor="let project of allProjects">
-<!--  <p>{{project.name}}</p>-->
-<!--  <p>{{project.User.firstname}}</p>-->
-<!--  -->
-<!--  <p>{{attachment.attachment}}</p>-->
-<!--  -->
-<!--  <p>{{project.description}}</p>-->
   <mat-card class="project-cards">
     <mat-card-header>
       <div class="profile-avatar" mat-card-avatar></div>
@@ -52,7 +44,7 @@
       <mat-card-subtitle>{{project.User.firstname}}</mat-card-subtitle>
     </mat-card-header>
     <div *ngFor="let attachment of project.Attachments">
-    <img alt="Photo of a Shiba Inu" mat-card-image
+    <img class="attachments" alt="attachment" mat-card-image
          src="{{attachment.attachment}}">
     </div>
     <mat-card-content>

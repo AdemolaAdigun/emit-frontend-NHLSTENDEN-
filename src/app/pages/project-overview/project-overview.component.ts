@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {EditProjectOverviewDialogComponent} from "../../components/pop-ups/edit-project-overview-dialog/edit-project-overview-dialog.component";
 import {FieldDialogComponent} from "../../components/pop-ups/field-dialog/field-dialog.component";
+import {ProjectDialogComponent} from "../../components/pop-ups/project-dialog/project-dialog.component"
 import {NavigationService} from "../../services/navigation.service";
 import {AuthService} from "../../services/auth.service";
 import {ProjectOverviewService} from "./project-overview.service";
@@ -46,22 +47,23 @@ export class ProjectOverviewComponent implements OnInit {
 
   private getAllProjects(): void {
     this.projectOverviewService.getProjects().subscribe(
-      (projects: any) => {
+      (projects) => {
         this.allProjects = this.convertResponseToObjService.convertToProjectsArray(projects);
       },
       () => alert('An error occurred when trying to load projects')
     );
   }
 
-  openFieldDialog(): void {
-    const dialogRef = this.dialog.open(FieldDialogComponent,
+  openProjectDialog(): void {
+    const dialogRef = this.dialog.open(ProjectDialogComponent,
       {
         data: {fieldName: this.fieldName}
-      });
+      }
+      );
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.fieldName = result
+      // this.fieldName = result
     });
   }
 

@@ -28,6 +28,7 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import {MatNativeDateModule} from "@angular/material/core";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {HttpInterceptorService} from "./services/http-interceptor.service";
+import {ProjectDialogComponent} from "./components/pop-ups/project-dialog/project-dialog.component";
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import {HttpInterceptorService} from "./services/http-interceptor.service";
     EditProjectOverviewDialogComponent,
     FieldDialogComponent,
     TemplateDialogComponent,
+    ProjectDialogComponent,
     ComponentDialogComponent,
     FieldAnswersDialogComponent
   ],
