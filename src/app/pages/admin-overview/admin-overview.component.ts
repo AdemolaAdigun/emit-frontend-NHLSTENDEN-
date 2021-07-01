@@ -51,7 +51,7 @@ export class AdminOverviewComponent implements OnInit {
 
   public logout(): void {
     this.auth.resetLocalStorage();
-    this.navigationService.navigateTo('');
+    this.navigationService.navigateTo('/login');
   }
 
   private getAllUsers(): void {

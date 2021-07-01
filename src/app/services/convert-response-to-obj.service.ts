@@ -57,7 +57,7 @@ export class ConvertResponseToObjService {
   public convertToUsersArray(response: any): User[] {
     let users: User[] = [];
 
-    for (const user of response as User[]) {
+    for (const user of response['users'] as User[]) {
       users.push(new User(user));
     }
 
