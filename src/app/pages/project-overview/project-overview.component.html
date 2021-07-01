@@ -40,8 +40,8 @@
   <mat-card class="project-cards">
     <mat-card-header>
       <div class="profile-avatar" mat-card-avatar></div>
-      <mat-card-title>{{project.name}}</mat-card-title>
-      <mat-card-subtitle>{{project.User.firstname}}</mat-card-subtitle>
+      <mat-card-title>Project: {{project.name}}</mat-card-title>
+      <mat-card-subtitle><i>Author: {{project.User.firstname}}</i></mat-card-subtitle>
     </mat-card-header>
     <div *ngFor="let attachment of project.Attachments">
     <img class="attachments" alt="attachment" mat-card-image
